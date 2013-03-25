@@ -10,6 +10,10 @@
 * Le projet vis, la réconciliation
 * Conclusion
 
+## TODO
+
+* Définir un peu plus la notion de site "Classique"
+
 ## En vrac
 
 * Est-ce qu'on parle de la configuration ?
@@ -21,7 +25,7 @@
 
 * Startup, beaucoup de choses à construire
 * Projet de zéro
-* Equipe d'expert, avec une expérience significative en Symfony 1/2
+* Equipe d'experts, avec une expérience significative en Symfony 1/2
 * Le sentiment d'être plus souvent contraint qu'aidé par le framework
 
 ### Les projets
@@ -46,6 +50,8 @@
   * Arborescence
   * Utilisation d'un ORM
   * Twig
+  * Controlleur partagés
+  * Arborescence
 
 ### La maintenance, la désillusion
 
@@ -58,14 +64,29 @@ Le backend évolue, il faut rajouter des écrans, retravailler des données
 * Sécurisation
   * Chaque controlleur fait sa propre vérification
   * Duplication de code, difficulté de maintenance, d'évolution
+* Gestion des "Task"
+  * Import et adaptation du composant Console
+* Configuration
+  * Comment gérer simplement les différents env, les valeurs par défaut ?
 
 ### Entamons un refactoring
 
 * Retrait de la couche ORM pour ne garder que la couche DBAL
+* On changer l'organisation, mais on ne peux pas faire un refacto "tremblement de terre"
+  * Cohabitation ancien et nouveau code
+  * Difficulté de maintenir les versions en parallèle
+
+### Dans le dur
+
+* Et si on avais une nouvelle bonne idée de l'organisation ?
+* Et on insère une 3eme organisation !
+* ALERTE ROUGE, on se pose, et on réfléchi
 
 ### Le projet vis, la réconciliation
 
 * Une fois ces erreurs apprises, le projet reprend vie
+  * On fait un bon point sur ce qu'on fait, comment on le fait
+  * On réinvesti un peu de temps pour lancer cette harmonisation
 
 ### Conclusion
 
