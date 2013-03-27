@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Silex, retour sur un an d'expérience</title>
+
+    <meta name="description" content="Présentation donnée au Symfony Live Paris 2013">
+    <meta name="author" content="Mikael Randy">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        
+        <section>
+          <img src="img/logo_silex.png">
+          <h1>Silex, retour sur un an d'utilisation</h1>
+          <h3>Symfony Live Paris 2013</h3>
+          <p>Le 5 avril 2013</p>
+        </section>
+
+        <section>
+          <h2>Le contexte</h2>
+          <ul>
+            <li>Startup, beaucoup de choses à construire</li>
+            <li>Projet de zéro</li>
+            <li>Equipe d'experts, avec une expérience significative en Symfony 1/2</li>
+            <li>Le sentiment d'être plus souvent contraint qu'aidé par le framework</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les projets</h2>
+          <ul>
+            <li>2 projets, bien distincts</li>
+            <li>
+              "Warehouse"
+              <ul>
+                <li>Entrepôt de livres numériques</li>
+                <li>Uniquement des API</li>
+                <li>Pas de vues</li>
+                <li>Pas de gestion d'utilisateurs complexe</li>
+              </ul>
+            </li>
+            <li>
+              "Backend"
+              <ul>
+                <li>Ecrans d'administration</li>
+                <li>Ecran de reporting de données</li>
+                <li>Notion de profils utilisateur</li>
+                <li>Ecrans adaptés en fonction du profil</li>
+                <li>Accès aux API d'autres appications</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Les débuts, l'euphorie</h2>
+          <ul>
+            <li>Feuille blanche, on peut faire ce qu'on veut</li>
+            <li>
+              On récupère les bonnées idées, on adapte celles qui nous gènes
+              <ul>
+                <li>Arborescence</li>
+                <li>Utilisation d'un ORM</li>
+                <li>Twig</li>
+                <li>Controlleur partagés</li>
+                <li>Arborescence</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>La maintenance, la désillusion</h2>
+
+          <p>Puis, un jour, il faut maintenir le projet. Le backend évolue, il faut rajouter des écrans, retravailler des données</p>
+
+          <ul>
+            <li>
+              ORM
+              <ul>
+                <li>"Mais pourquoi est-ce qu'on a gardé ça ?"</li>
+                <li>Tout ce qu'on voulait éviter, les contraintes sans la souplesse</li>
+              </ul>
+            </li>
+            <li>
+              Sécurisation
+              <ul>
+                <li>Chaque controlleur fait sa propre vérification</li>
+                <li>Duplication de code, difficulté de maintenance, d'évolution</li>
+              </ul>
+            </li>
+            <li>
+              Gestion des "Task"
+              <ul>
+                <li>Import et adaptation du composant Console</li>
+              </ul>
+            </li>
+            <li>
+              Configuration
+              <ul>
+                <li>Comment gérer simplement les différents env, les valeurs par défaut ?</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Entamons un refactoring</h2>
+
+          <ul>
+            <li>Retrait de la couche ORM pour ne garder que la couche DBAL</li>
+            <li>
+              On changer l'organisation, mais on ne peux pas faire un refacto "tremblement de terre"
+              <ul>
+                <li>Cohabitation ancien et nouveau code</li>
+                <li>Difficulté de maintenir les versions en parallèle</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Dans le dur</h2>
+
+          <ul>
+            <li>Et si on avais une nouvelle bonne idée de l'organisation ?</li>
+            <li>Et on insère une 3eme organisation !</li>
+            <li>ALERTE ROUGE, on se pose, et on réfléchi</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Le projet vis, la réconciliation</h2>
+
+          <ul>
+            <li>
+              Une fois ces erreurs apprises, le projet reprend vie
+              <ul>
+                <li>On fait un bon point sur ce qu'on fait, comment on le fait</li>
+                <li>On réinvesti un peu de temps pour lancer cette harmonisation</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+
+          <ul>
+            <li>
+              Au début, j'ai présenté 2 projets, mais par la suite, je ne parle plus que d'un seul
+              <ul>
+                <li>Le warehouse est loin d'un projet web "standard", il n'utilise pas les outils habituels</li>
+                <li>Le backend est un projet plus standard : vue, gestion des utilisateurs, ...</li>
+              </ul>
+            </li>
+            <li>
+              Après un an, si j'avais à refaire le choix de l'outil a utiliser
+              <ul>
+                <li>Pour le backend, je ne reprendrais pas Silex, mais Symfony, car je n'ai fait que réinventer la roue</li>
+                <li>Pour le warehouse, je reprendrais Silex. J'aurais perdu trop de temps à détourner Symfony de son but originel</li>
+              </ul>
+            </li>
+            <li>
+              Quitte à enfoncer des portes ouvertes
+              <ul>
+                <li>A partir du moment où on passe du temps à réinstaller les composants de Sf2, il faut se poser la question du choix de Silex</li>
+                <li>Se poser la question au moment du démarrage du projet des composants qu'il va falloir embarquer</li>
+                <li>Est-ce un projet "standard" ? Si oui => Symfony2</li>
+              </ul>
+            </li>
+            <li>
+              Pourquoi réinventer la roue
+              <ul>
+                <li>Trouver des exemples de Provider qui ne font que réinventer Symfony2</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+  </body>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+
+    Reveal.initialize({
+      width: 1024,
+      height: 968,
+
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+
+  </script>
+</html>
