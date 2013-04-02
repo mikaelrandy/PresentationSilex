@@ -38,91 +38,253 @@
         </section>
 
         <section>
-          <h2>Le contexte</h2>
-          <ul>
-            <li>Startup, beaucoup de choses à construire</li>
-            <li>Projet de zéro</li>
-            <li>Equipe d'experts, avec une expérience significative en Symfony 1/2</li>
-            <li>Le sentiment d'être plus souvent contraint qu'aidé par le framework</li>
-          </ul>
+          <h2>La loi des 2 pieds</h2>
+
+          <img src="img/loi_2pieds.png" />
+
+          <aside class="notes">
+            * Si vous n'êtes en train d'apprendre ou de contribuer, passez à autre chose
+            * Ne vous sentez pas obligé de rester ici
+          </aside>
         </section>
 
         <section>
-          <h2>Les projets</h2>
-          <ul>
-            <li>2 projets, bien distincts</li>
-            <li>
-              "Warehouse"
-              <ul>
-                <li>Entrepôt de livres numériques</li>
-                <li>Uniquement des API</li>
-                <li>Pas de vues</li>
-                <li>Pas de gestion d'utilisateurs complexe</li>
-              </ul>
-            </li>
-            <li>
-              "Backend"
-              <ul>
-                <li>Ecrans d'administration</li>
-                <li>Ecran de reporting de données</li>
-                <li>Notion de profils utilisateur</li>
-                <li>Ecrans adaptés en fonction du profil</li>
-                <li>Accès aux API d'autres appications</li>
-              </ul>
-            </li>
-          </ul>
+          <section>
+            <h2>Me, my and myself</h2>
+
+            <img src="img/photo_conference.png" />
+            
+            <p>Mikael Randy</p>
+            <p>@mikaelrandy</p>
+
+            <aside class="notes">
+              * Qui je suis
+              * Développeur PHP depuis 8 ans
+            </aside>
+          </section>
+
+          <section>
+            <img src="img/logo_silex.png" />
+            <img src="img/logo_tea.png" />
+            <img src="img/logo_ruby.png" />
+            <img src="img/logo_symfony2.png" />
+
+            <aside class="notes">
+              * The ebook alternative<br />
+                * Startup dans le monde du livre numérique<br />
+                * Plateforme compléte de diffusion et de lecture de livres numériques<br />
+              * Silex<br />
+                * Pour voir si vous avez suivi ;)<br />
+                * Nous allons y revenir ...<br />
+              * Ruby<br />
+                * J'ai vu d'autres choses, d'autres approches, car je pense "le bon outil pour le bon besoin"<br />
+              * Symfony<br />
+                * Découverte en 2007 (Symfony 1.0 !)<br />
+                * Application en SSII (responsable technique)<br />
+                * Migration progressive jusque Symfony2.0<br />
+            </aside>
+          </section>
+
+          <section>
+            <img src="img/AFUP_LYON_LOGO.png" />
+
+            <aside class="notes">
+              * Membre actif de l'AFUP
+              * Coordinateur de l'antenne lyonnaise
+            </aside>
+          </section>
         </section>
 
         <section>
-          <h2>Les débuts, l'euphorie</h2>
-          <ul>
-            <li>Feuille blanche, on peut faire ce qu'on veut</li>
-            <li>
-              On récupère les bonnées idées, on adapte celles qui nous gènes
-              <ul>
-                <li>Arborescence</li>
-                <li>Utilisation d'un ORM</li>
-                <li>Twig</li>
-                <li>Controlleur partagés</li>
-                <li>Arborescence</li>
-              </ul>
-            </li>
-          </ul>
+          <section>
+            <h2>Le contexte</h2>
+          </section>
+
+          <section>
+            <h3>L'entreprise</h3>
+            <ul>
+              <li>Startup</li>
+              <li>Tout à construire</li>
+            </ul>
+
+            <aside class="notes">
+              * Startup
+                * Nouvelle société
+                * Nouvelle branche (livre numérique)
+              * Tout à construire, tout à faire, sur une équipe réduite
+            </aside>
+          </section>
+
+          <section>
+            <h3>Projects</h3>
+
+            <ul>
+              <li>Pas d'existant</li>
+            </ul>
+
+            <aside class="notes">
+              * Projet de 0
+              * Liberté totale sur tout les choix
+              * Seules contraintes : il va falloir le maintenir
+            </aside>
+          </section>
+
+          <section>
+            <h3>L'équipe</h3>
+
+            <ul>
+              <li>Experts</li>
+              <li>Sentiment de contrainte par le framework</li>
+            </ul>
+
+            <aside class="notes">
+              * Equipe d'experts
+                * 2 séniors, 1 débutante avec de grands idéaux
+                * Expérience significative en Symfony 1/2
+              * Le sentiment d'être plus souvent contraint qu'aidé par le framework
+            </aside>
+          </section>
         </section>
 
         <section>
-          <h2>La maintenance, la désillusion</h2>
+          <section>
+            <h2>Les projets</h2>
 
-          <p>Puis, un jour, il faut maintenir le projet. Le backend évolue, il faut rajouter des écrans, retravailler des données</p>
+            <aside class="notes">
+              * Sur les projets de la société (PHP, Symfony, Silex, Ruby bulk, Rails), 2 retenus
+              * Projets typiques pour appuyer mon propos
+            </aside>
+          </section>
 
-          <ul>
-            <li>
-              ORM
-              <ul>
-                <li>"Mais pourquoi est-ce qu'on a gardé ça ?"</li>
-                <li>Tout ce qu'on voulait éviter, les contraintes sans la souplesse</li>
-              </ul>
-            </li>
-            <li>
-              Sécurisation
-              <ul>
-                <li>Chaque controlleur fait sa propre vérification</li>
-                <li>Duplication de code, difficulté de maintenance, d'évolution</li>
-              </ul>
-            </li>
-            <li>
-              Gestion des "Task"
-              <ul>
-                <li>Import et adaptation du composant Console</li>
-              </ul>
-            </li>
+          <section>
+            <h3>Warehouse</h3>
+            <ul>
+              <li>Entrepôt de livres numériques</li>
+              <li>Beaucoup de traitements métiers</li>
+              <li>Uniquement des API</li>
+            </ul>
+
+            <aside class="notes">
+              * Un projet qui sort des sentiers battus
+              * Beaucoup de traitements métiers
+                * Stockage de fichier, watermarking, protection DRM, ...
+                * On utilise pas trop les fonctionnalités du Framework
+              * Uniquement des APIs
+                * Part minime du fonctionnement général
+            </aside>
+          </section>
+
+          <section>
+            <h3>Backend</h3>
+
+            <ul>
+              <li>Ecrans d'administration</li>
+              <li>Ecran de reporting de données</li>
+              <li>Connexion/profils utilisateurs</li>
+            </ul>
+          </section>
+
+          <aside class="notes">
+            * Un projet "classique"
+              * Des écrans qui servent d'interfaces pour création/modification de données
+              * Un peu de calcul, mais sans plus
+            * Profils utilisateurs
+              * Ecrans à contenu adaptables
+          </aside>
+        </section>
+
+        <section>
+          <section>
+            <h2>Les débuts, l'euphorie</h2>
+
+            <ul>
+              <li>Feuille blanche</li>
+              <li>
+                Récupération/adaptation
+                <ul>
+                  <li>Arborescence</li>
+                  <li>ORM</li>
+                  <li>Twig</li>
+                  <li>Controlleur partagés</li>
+                </ul>
+              </li>
+            </ul>
+
+            <aside class="notes">
+              * Feuille blanche
+                * Grisé par le "tout à faire"
+                * Euphorie du début
+              * On récupère les bonnées idées, on adapte celles qui nous gènes
+                * Arborescence 
+                  * Découpage propre
+                * ORM
+                  * On garde toute la couche
+                * Twig
+                  * C'est tellement pratique de l'utiliser
+                * Controlleur partagés
+                  * On construit des controlleurs qui sont réutilisables, et utilisés par plusieurs routes
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>La maintenance, la désillusion</h2>
+
+            <aside class="notes">
+              * Puis, un jour, il faut maintenir le projet
+              * Le backend évolue
+                * il faut rajouter des écrans
+                * Modifier les traitement métiers
+            </aside>
+          </section>
+
+          <section>
+            <h3>ORM</h3>
+
+            <blockquote>Mais pourquoi on a gardé ça ?</blockquote>
+
+            <p>Tout ce qu'on voulait éviter, les contraintes sans la souplesse</p>
+
+            <aside class="notes">
+              * Système rigide
+              * Perte de performances pour apporter de la facilité initiale
+            </aside>
+          </section>
+
+          <section>
+            <h3>Sécurisation</h3>
+
+            <ul>
+              <li>Chaque controlleur fait sa propre vérification</li>
+              <li>Duplication de code, difficulté de maintenance, d'évolution</li>
+            </ul>
+
+          </section>
+
+          <section>
+            <h3>Tasks</h3>
+
+            <ul>
+              <li>
+                Gestion des "Task"
+                <ul>
+                  <li>Import et adaptation du composant Console</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Configuration</h3>
+
             <li>
               Configuration
               <ul>
                 <li>Comment gérer simplement les différents env, les valeurs par défaut ?</li>
               </ul>
             </li>
-          </ul>
+          </section>
         </section>
 
         <section>
