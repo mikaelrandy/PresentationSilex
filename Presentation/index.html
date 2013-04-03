@@ -269,25 +269,35 @@
           <section>
             <h3>Tasks</h3>
 
-            <ul>
-              <li>
-                Gestion des "Task"
-                <ul>
-                  <li>Import et adaptation du composant Console</li>
-                </ul>
-              </li>
-            </ul>
+            <blockquote>Mais pourquoi on a pas utilisé le composant Console ?</blockquote>
+
+            <p>On a réinventé la roue</p>
+            <p class="fragment">Et en plus, elle est carrée :/</p>
+
+            <aside class="notes">
+              * Emporté par l'élan, on a fait une monumentale erreur
+              * Ecriture de notre propre librairie de commandes CLI, mais fonctionnellement loin du composant Symfony
+            </aside>
           </section>
 
           <section>
             <h3>Configuration</h3>
 
-            <li>
-              Configuration
-              <ul>
-                <li>Comment gérer simplement les différents env, les valeurs par défaut ?</li>
-              </ul>
-            </li>
+            <ul>
+              <li>Gestion et accès</li>
+              <li>Valeurs par défaut</li>
+              <li>Gestion multi-environnements</li>
+            </ul>
+
+            <aside class="notes">
+              * Gestion et accès facile
+                * Pimple est cool ...
+                * ... mais il faut l'alimenter :/
+              * Valeurs par défaut
+                * Comment éviter 10mn de configuration à chaque MEP
+              * Gestion multi-environnement
+                * ça semble simple, hein ;)
+            </aside>
           </section>
         </section>
 
