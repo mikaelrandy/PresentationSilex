@@ -221,6 +221,7 @@
                 * Arborescence 
                   * Découpage propre
                 * ORM
+                  * Doctrine
                   * On garde toute la couche
                 * Twig
                   * C'est tellement pratique de l'utiliser
@@ -302,28 +303,100 @@
         </section>
 
         <section>
-          <h2>Entamons un refactoring</h2>
+          <section>
+            <h2>Entamons un refactoring</h2>
+            
+            <aside class="notes">
+              * Bon, on prend un peu de temps et on reprend un peu ça
+            </aside>
+          </section>
 
-          <ul>
-            <li>Retrait de la couche ORM pour ne garder que la couche DBAL</li>
-            <li>
-              On changer l'organisation, mais on ne peux pas faire un refacto "tremblement de terre"
-              <ul>
-                <li>Cohabitation ancien et nouveau code</li>
-                <li>Difficulté de maintenir les versions en parallèle</li>
-              </ul>
-            </li>
-          </ul>
+          <section>
+            <h3>ORM--, DBAL++</h3>
+
+            <ul>
+              <li>Retrait de l'ORM
+              <li>Conservation la couche DBAL</li>
+            </ul>
+
+            <aside class="notes">
+              * Retrait ORM
+                * Tout ce qui est Entity, Repository, bref, le code auto-généré
+                * On ne passera plus par du code pour accéder à la base de données
+              * Conservation de la couche DBAL
+                * Facilité d'accès à la connexion
+                * Gestion des erreurs
+                * Protection des requêtes
+                * Encapsulation "simple"
+            </aside>
+          </section>
+
+          <section>
+            <h3>Sécurisation</h3>
+
+            <blockquote>Comment faire sans Symfony ?</blockquote>
+
+            <ul>
+              <li>Middleware Silex</li>
+            </p>
+
+            <aside class="notes">
+              * C'est pas super, mais c'est un quickwin
+            </aside>
+          </section>
+
+          <section>
+            <h3>Difficulité de migration</h3>
+
+            <ul>
+              <li>Pas de refactoring "tremblement de terre"</li>
+              <li>Cohabitation ancien et nouveau code</li>
+              <li>Difficulté de maintenir les versions en parallèle</li>
+            </ul>
+
+            <aside class="notes">
+              * Refactoring "tremblement de terre"
+                * On ne peux pas investir X jours sans produire de la valeur
+                * On fait la base, le nécessaire, puis ça sera du continue
+              * Cohabitation
+                * On est plus devant une feuille vierge
+                * On "paye la note"
+              * Maintenance
+                * Une petite modif ? Ah bah non, c'est dans un code à migrer
+            </aside>
+          </section>
         </section>
 
         <section>
-          <h2>Dans le dur</h2>
+          <section>
+            <h2>Dans le dur</h2>
 
-          <ul>
-            <li>Et si on avais une nouvelle bonne idée de l'organisation ?</li>
-            <li>Et on insère une 3eme organisation !</li>
-            <li>ALERTE ROUGE, on se pose, et on réfléchi</li>
-          </ul>
+            <aside class="notes">
+              * Vous devez vous dire qu'on est enfin sur de bons rails ?
+                * EH BAH NON !
+            </aside>
+          </section>
+
+          <section>
+            <h3>Tiens, une nouvelle idée</h3>
+
+            <ul>
+              <li>Découpage en modèle/service/controlleur</li>
+              <li>Tiens, une 3eme organisation !</li>
+            </ul>
+            <br /><br />
+            <p class="fragment" style="font-size: 120%; color: red;">ALERTE ROUGE !</p>
+
+            <aside class="notes">
+              * A force de se renseigner, on trouve de nouvelles idées
+                * Le découpage est plus proche de notre approche par profil
+                * ça colle, on y va
+              * Nouvelle organisation
+                * Alors que le refactoring précédent n'est pas terminé, on s'apprète à introduire une 3ème approche
+              * Alerte
+                * On va trop vite, on se laisse trop porter par le vent
+            </aside>
+          </section>
         </section>
 
         <section>
