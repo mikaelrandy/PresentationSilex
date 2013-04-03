@@ -450,48 +450,71 @@
         </section>
 
         <section>
-          <h2>Conclusion</h2>
+          <section>
+            <h2>Conclusion</h2>
+          </section>
 
-          <ul>
-            <li>
-              Au début, j'ai présenté 2 projets, mais par la suite, je ne parle plus que d'un seul
-              <ul>
-                <li>Le warehouse est loin d'un projet web "standard", il n'utilise pas les outils habituels</li>
-                <li>Le backend est un projet plus standard : vue, gestion des utilisateurs, ...</li>
-              </ul>
-            </li>
-            <li>
-              Après un an, si j'avais à refaire le choix de l'outil a utiliser
-              <ul>
-                <li>Pour le backend, je ne reprendrais pas Silex, mais Symfony, car je n'ai fait que réinventer la roue</li>
-                <li>Pour le warehouse, je reprendrais Silex. J'aurais perdu trop de temps à détourner Symfony de son but originel</li>
-              </ul>
-            </li>
-            <li>
-              Quitte à enfoncer des portes ouvertes
-              <ul>
-                <li>A partir du moment où on passe du temps à réinstaller les composants de Sf2, il faut se poser la question du choix de Silex</li>
-                <li>Se poser la question au moment du démarrage du projet des composants qu'il va falloir embarquer</li>
-                <li>Est-ce un projet "standard" ? Si oui => Symfony2</li>
-              </ul>
-            </li>
-            <li>
-              Pourquoi réinventer la roue
-              <ul>
-                <li>Trouver des exemples de Provider qui ne font que réinventer Symfony2</li>
-              </ul>
-            </li>
-          </ul>
+          <section>
+            <h3>Retours sur les projets</h3>
+
+            <ul>
+              <li>Presque tout les retours concernent le backend</li>
+              <li>Pour le Warehouse, cela concerne principalement des bonnes pratiques</li>
+            </ul>
+
+            <aside class="notes">
+              * Backend
+                * La plupart des retours auraient pu être évités dans un contexte plus formel
+              * Warehouse
+                * Quelques errements, mais globalement maitrisé
+                * Surtout le composant Console
+            </aside>
+          </section>
+
+          <section>
+            <h3>Si c'était à refaire ?</h3>
+
+            <ul>
+              <li>Backend : Symfony</li>
+              <li>Warehouse : Silex</li>
+            </ul>
+
+            <aside class="notes">
+              * Backend
+                * Symfony : Trop besoin d'outils déjà existant
+                * On a trop réinventé la roue sur ce projet
+              * Warehouse
+                * On continuerais avec Silex
+                * Trop peu d'utilisation des composants de Symfony, trop de hors chemin
+                * On est persuadé que Symfony nous aurais demandé du travail d'adaptation (Bundle, modèle, ...)
+            </aside>
+          </section>
+
+          <section>
+            <h3>Les leçons à retenir</h3>
+
+            <ul>
+              <li>Réinstallation de plusieurs composants Symfony2 ?</li>
+              <li>Se demander les composants utiles pour son projet</li>
+              <li>Est-ce un projet "standard" ?</li>
+            </ul>
+
+            <aside class="notes">
+              * Réinstallation composant
+                * Si on en installe trop, c'est qu'on fait quelque chose de mal
+              * Quels composants ?
+                * Se poser la question au plus tôt de ce qu'il faut
+              * Projet standard
+                * Si Symfony convient, pourquoi vouloir en sortir ?
+                * Ne pas se laisser porter par le vent des nouveautés
+            </aside>
+          </section>
         </section>
 
         <section>
           <section>
-            <p>Reveal.js</p>
-            <p>@mikaelrandy</p>
-          </section>
-
-          <section>
             <h2>Questions ?</h2>
+            <p>@mikaelrandy</p>
             <p>Adresse de la présentation partagée</p>
           </section>
         </section>
